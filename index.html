@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7db0fd;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+        text-align: center;
+        padding: 20px;
+        background-color: 7db0fd;
+        color: black;
+        font-weight: 700;
+        font-size: 2em;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        }   
+
+        .header img {
+        height: 40px; 
+        margin-right: 10px; 
+        }
+
+        .timer-container {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        .timer {
+            font-size: 5em;
+            color: red;
+        }
+        .start-btn, .stop-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+        }
+        .stop-btn {
+            background-color: #f44336;
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        .sidebar h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar li span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .sidebar li:last-child {
+            border-bottom: none;
+        }
+        .sidebar li:hover {
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .iframe-container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="path/to/your/logo.png" alt="Logo" class="logo">
+        Elocution completion (Pick and Speak)
+    </div>
+    
+
+    <div class="timer-container">
+        <div class="timer" id="timer">02:00</div>
+        <button class="start-btn" onclick="startTimer()">Start Timer</button>
+        <button class="stop-btn" onclick="stopTimer()">Stop Timer</button>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h2>Discussion Topics</h2>
+            <ul>
+                <li><span>1.</span>The benefits of social media</li>
+                <li><span>2.</span>Importance of AI in education</li>
+                <li><span>3.</span>Benefits of reading</li>
+                <li><span>4.</span>Building better communities through community service</li>
+                <li><span>5.</span>Dependence on information technology</li>
+                <li><span>6.</span>How can education reduce social inequality?</li>
+                <li><span>7.</span>Importance of education</li>
+                <li><span>8.</span>Reading and mental health</li>
+                <li><span>9.</span>Should schools teach sign language?</li>
+                <li><span>10.</span>Should TV debates be banned?</li>
+                <li><span>11.</span>Should violent video games be banned?</li>
+                <li><span>12.</span>Student bullies should be expelled</li>
+                <li><span>13.</span>Types of alternative energy sources</li>
+                <li><span>14.</span>Climate change</li>
+                <li><span>15.</span>Constitution of India</li>
+                <li><span>16.</span>Corruption</li>
+                <li><span>17.</span>Endangered species need protection</li>
+                <li><span>18.</span>Feminism</li>
+                <li><span>19.</span>How does music affect the brain?</li>
+                <li><span>20.</span>Implication of kindness</li>
+                <li><span>21.</span>Importance of extracurricular activities</li>
+                <li><span>22.</span>Importance of fishing regulations</li>
+                <li><span>23.</span>Importance of physical activity and sports</li>
+                <li><span>24.</span>Importance of unity</li>
+            </ul>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://wheelspinner.app/noads/#ID/PGRpdj4xPC9kaXY+PGRpdj4yPC9kaXY+PGRpdj4zPC9kaXY+PGRpdj40PC9kaXY+PGRpdj41PC9kaXY+PGRpdj42PC9kaXY+PGRpdj43PC9kaXY+PGRpdj44PC9kaXY+PGRpdj45PC9kaXY+PGRpdj4xMDwvZGl2PjxkaXY+MTE8L2Rpdj48ZGl2PjEyPC9kaXY+PGRpdj4xMzwvZGl2PjxkaXY+MTQ8L2Rpdj48ZGl2PjE1PC9kaXY+PGRpdj4xNjwvZGl2PjxkaXY+MTc8L2Rpdj48ZGl2PjE4PC9kaXY+PGRpdj4xOTwvZGl2PjxkaXY+MjA8L2Rpdj48ZGl2PjIxPC9kaXY+PGRpdj4yMjwvZGl2PjxkaXY+MjM8L2Rpdj48ZGl2PjI0PC9kaXY+" title="Wheel Spinner - Spin the wheel of names to decide random choices" name="myiFrame" frameborder="0" scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+        </div>
+    </div>
+
+    <script>
+        let timerInterval;
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer');
+            let time = 120;
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                const minutes = Math.floor(time / 60);
+                const seconds = time % 60;
+                timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                if (time === 0) {
+                    clearInterval(timerInterval);
+                    alert('Time is up!');
+                } else {
+                    time--;
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+            document.getElementById('timer').textContent = "02:00";
+        }
+    </script>
+
+</body>
+</html>
